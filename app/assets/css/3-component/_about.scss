@@ -1,0 +1,102 @@
+.about {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  position: relative;
+  overflow: hidden;
+  z-index: 10;
+  background-color: #fff;
+  border-bottom: 1px solid #e8e8e8;
+  .row {
+    margin: 0 -15px;
+    display: flex;
+    // position: relative;
+    //media
+    @media (max-width: 767px ) {
+      display: block;
+    }
+    .col-1 {
+      width: 50%;
+      // height: 100%;
+      // order: 2;
+      position: absolute;
+      right: -5px;
+      top: 0;
+      bottom: 0;
+      @media (max-width: 767px ) {
+        display: block;
+        width: 100%;
+        position: relative;
+        top: -100px;
+        img {
+          // background-size: cover;
+          // background-position: center center;
+          width: 100%;
+          height: 100%;
+        }
+
+      }
+
+    }
+    .col-2 {
+      width: 50%;
+      // order: 1;
+      margin-top: -29px;
+      margin-bottom: 25px;
+      z-index: 10;
+      // position: relative;
+      @media (max-width: 767px ) {
+        display: block;
+        width: 100%;
+        // position: relative;
+
+      }
+      .title {
+        padding: 50px 50px 0 50px;
+        h4 {
+          font-size: 18px;
+          font-weight: 300;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          margin-bottom: 10px;
+        }
+        h3 {
+          font-size: 48px;
+          font-weight: 700;
+          margin: 0;
+          span {
+            &::before {
+              content: ".";
+              color: red;
+            }
+          }
+          //medai
+          @media (max-width: 992px) {
+            font-size: 40px;
+          }
+        }
+        hr {
+          border: 0;
+          border-top: 1px solid #191b1d;
+          width: 45px;
+        }
+      }
+      p {
+        font-size: 21px;
+        color: #6d747c;
+        padding-left: 50px;
+      }
+    }
+    // .rev-1 {
+    //   order: 1 !important;
+    //   // display: flex;
+    //   // left: 0;
+    //   // display: none;
+    // }
+    // .rev-2 {
+    //   order: 2 !important;
+    //   // right: 0;
+    //   // display: flex;
+    // }
+  }
+}
+

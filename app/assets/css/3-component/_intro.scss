@@ -1,0 +1,96 @@
+.main_intro {
+  padding-top: 170px;
+  padding-bottom: 100px;
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+  border-bottom: 1px solid #e8e8e8;
+  .container {
+    //media
+    @media (min-width: 768px) {
+      width: 750px;
+      margin: 0 auto;
+    }
+    @media (min-width: 992px) {
+      width: 970px;
+      margin: 0 auto;
+    }
+    .row {
+      margin-right: -15px;
+      margin-left: -15px;
+      .content_iner {
+        text-align: center;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        position: relative;
+        z-index: 10;
+        h2 {
+          margin-top: 0;
+          font-weight: 300;
+          font-size: 58px;
+          //media
+          @media (max-width: 767px) {
+            font-size: 46px;
+          }
+        }
+        ul {
+          font-size: 20px;
+          list-style: none;
+          padding: 0;
+          margin: 25px 0 25px -5px;
+          @media (max-width: 767px) {
+            font-size: 16px;
+          }
+          li {
+            display: inline-block;
+            padding-right: 5px;
+            padding-left: 5px;
+          }
+        }
+        p {
+          font-size: 18px;
+          color: #6d747c;
+          margin: 25px 0;
+          padding-right: 100px;
+          padding-left: 100px;
+          font-weight: 300;
+        }
+        .intro_button {
+          // font-size: 18px;
+          margin: 25px 0;
+          font-weight: 400;
+          // text-align: center;
+          color: #191b1d;
+          border-color: #191b1d;
+          background-color: transparent;
+          padding: 0 32px;
+          height: 55px;
+          line-height: 53px;
+          border-radius: 0;
+          text-transform: uppercase;
+          font-size: 13px;
+          letter-spacing: 1px;
+          transition: all .3s ease;
+          &:hover {
+            background-color: #000000;
+            color: #fff;
+          }
+          svg {
+            width: 30px;
+            height: 30px;
+            position: relative;
+            top: 10px;
+            left: 10px;
+            transition: all .3s ease;
+          }
+          &:hover svg {
+            transform: translateX(5px);
+            path {
+              fill: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}

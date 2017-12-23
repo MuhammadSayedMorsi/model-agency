@@ -1,13 +1,15 @@
-//$( document ).ready(function() {
+$(function () {
 
-//});
+    //toggle_the_nav
+  $('.navtoggle').click(function(event) {
+    event.preventDefault();
+    $('.navtoggle').toggleClass('open');
+
+    //toggle_the_ul
+    $('.navigation').toggleClass('active');
+  });
+});
 
 
-  var day = "tuesday";
 
-  if (day === "friday") {
-  	
-  	document.write('true');
-
-  } 
 
