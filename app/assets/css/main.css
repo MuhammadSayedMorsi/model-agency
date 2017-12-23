@@ -614,7 +614,7 @@ hr {
         width: 100%;
         height: 100%; }
     .c_soon .row .content {
-      padding: 100px 100px 100px 50px;
+      padding: 150px 100px 100px 50px;
       width: 50%;
       position: relative; }
       @media (max-width: 767px) {
@@ -680,3 +680,67 @@ hr {
           -webkit-transform: rotate(-90deg);
           -ms-transform: rotate(-90deg);
           transform: rotate(-90deg); }
+
+.main_mod {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  position: relative;
+  overflow: hidden;
+  z-index: 10;
+  border-bottom: 1px solid #e8e8e8; }
+  .main_mod .container {
+    padding-right: 15px;
+    padding-left: 15px; }
+    @media (min-width: 768px) {
+      .main_mod .container {
+        width: 750px;
+        margin: 0 auto; } }
+    @media (min-width: 992px) {
+      .main_mod .container {
+        width: 970px;
+        margin: 0 auto; } }
+    .main_mod .container .title {
+      text-align: center;
+      margin: 0 auto; }
+      .main_mod .container .title h5 {
+        font-size: 18px;
+        width: 100px;
+        color: rgba(0, 0, 0, 0.8);
+        text-align: center;
+        letter-spacing: 2px;
+        font-weight: 300;
+        text-transform: uppercase;
+        position: relative;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+        margin: 0 0 10px 0; }
+        .main_mod .container .title h5::before {
+          content: "";
+          position: absolute;
+          bottom: 13px;
+          right: -75px;
+          height: 2px;
+          background-color: rgba(0, 0, 0, 0.5);
+          width: 95px; }
+        .main_mod .container .title h5::after {
+          content: "";
+          position: absolute;
+          bottom: 13px;
+          height: 2px;
+          background-color: rgba(0, 0, 0, 0.5);
+          width: 95px;
+          left: -75px; }
+      .main_mod .container .title h3 {
+        font-size: 40px;
+        text-transform: uppercase;
+        margin: 0; }
+        .main_mod .container .title h3 span::before {
+          content: ".";
+          color: red; }
+      .main_mod .container .title .black_line {
+        border: none;
+        border-color: #191b1d;
+        margin: 30px auto;
+        width: 45px; }
