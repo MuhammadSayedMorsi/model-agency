@@ -2,6 +2,7 @@ const gulp        = require('gulp');
 const browserSync = require('browser-sync').create();
 const sass        = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
+const image = require('gulp-image');
 
 // Compile Sass & Inject Into Browser
 gulp.task('sass', function() {
@@ -15,7 +16,11 @@ gulp.task('sass', function() {
         .pipe(gulp.dest("app/assets/css"))
         .pipe(browserSync.stream());
 });
-
+gulp.task('image', function () {
+    return gulp.src('app/assets/img/**')
+        .pipe(image())
+        .pipe(gulp.dest('app/assets/img'));
+});
 
 // Watch Sass & Serve
 gulp.task('serve', ['sass'], function() {
@@ -27,8 +32,9 @@ gulp.watch(["app/assets/css/**/*.scss"], ['sass']);
 
 gulp.watch("app/*.html").on('change', browserSync.reload);
 gulp.watch("app/assets/js/*.js").on('change', browserSync.reload);
+gulp.watch('app/assets/img/**');
 
 });
 
 // Default Task
-gulp.task('default', ['serve']);
+gulp.task('default', ['serve', 'image']);

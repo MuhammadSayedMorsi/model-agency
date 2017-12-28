@@ -35,11 +35,11 @@
     }
     //menu-toggle...
     .menu {
-      //media...
+      float: right;
+      //media
       @media (min-width: 992px) {
         display: none;
       }
-      float: right;
       .menu-item {
         float: left;
         .navtoggle {
@@ -119,8 +119,8 @@
                 overflow: hidden;
                 padding: 7px 0;
                 max-width: 0;
-                border-bottom: 2px solid #ef2d56;
-                color: #ef2d56;
+                border-bottom: 2px solid #ebc3a2;
+                color: #ebc3a2;
                 content: attr(data-hover);
                 transition: max-width 0.5s;
               }
@@ -130,10 +130,6 @@
                 }
               }
             }
-            //link active...
-            // .active {
-            //   color: #ef2d56;
-            // }
           }
         }
       }
@@ -152,11 +148,37 @@
           background-color: #fff;
           // transition: all 0.3s ease-in-out;
           .navigation_menu {
+            perspective: 1000px;
+            //media
             @media (max-width: 991px) {
               float: left;
               max-height: 400px;
             }
             li {
+              opacity: 0;
+              transform-origin: top center;
+            border-bottom: 1px solid red;
+
+              @for $i from 1 through 6 {
+                &:nth-child(#{$i}) {
+                  animation-name: menu1;
+                  animation-duration: 300ms;
+                  animation-delay: (150ms * $i) - 300;
+                  animation-timing-function: ease-in-out;
+                  animation-fill-mode: forwards;
+                }
+                @keyframes menu1 {
+                  0% {
+                    opacity: 0;
+                    transform: rotateX(-90deg);
+                  }
+                  100% {
+                    opacity: 1;
+                    transform: rotateY(0deg);
+                  }
+                }
+              }
+
           //media
             @media (max-width: 991px) {
               float: none;
