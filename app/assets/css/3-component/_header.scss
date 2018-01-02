@@ -157,7 +157,6 @@
             li {
               opacity: 0;
               transform-origin: top center;
-            border-bottom: 1px solid red;
 
               @for $i from 1 through 6 {
                 &:nth-child(#{$i}) {

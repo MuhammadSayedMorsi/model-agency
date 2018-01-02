@@ -16,6 +16,7 @@ gulp.task('sass', function() {
         .pipe(gulp.dest("app/assets/css"))
         .pipe(browserSync.stream());
 });
+
 gulp.task('image', function () {
     return gulp.src('app/assets/img/**')
         .pipe(image())
@@ -25,12 +26,12 @@ gulp.task('image', function () {
 // Watch Sass & Serve
 gulp.task('serve', ['sass'], function() {
     browserSync.init({
-        server: "app"
+        server: "./"
 });
 
 gulp.watch(["app/assets/css/**/*.scss"], ['sass']);
 
-gulp.watch("app/*.html").on('change', browserSync.reload);
+gulp.watch("./index.html").on('change', browserSync.reload);
 gulp.watch("app/assets/js/*.js").on('change', browserSync.reload);
 gulp.watch('app/assets/img/**');
 

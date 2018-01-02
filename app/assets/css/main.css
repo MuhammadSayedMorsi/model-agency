@@ -441,8 +441,7 @@ hr {
               opacity: 0;
               -webkit-transform-origin: top center;
               -ms-transform-origin: top center;
-              transform-origin: top center;
-              border-bottom: 1px solid red; }
+              transform-origin: top center; }
               #topnav .container .navigation.active .navigation_menu li:nth-child(1) {
                 -webkit-animation-name: menu1;
                 animation-name: menu1;
